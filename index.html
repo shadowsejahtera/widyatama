@@ -10,6 +10,15 @@
 
 	<style>
 		@import url(https://fonts.googleapis.com/css?family=Lato);
+		html{
+			text-rendering: optimizeLegibility !important;
+			-webkit-font-smoothing: antialiased !important;
+		}
+		body{
+			font-family: 'Lato', sans-serif;
+			color:#fff;
+			
+		}
 		img{
 			position:absolute;
 		}
@@ -22,9 +31,21 @@
 			color:#fff;
 			display:block;
 		}
+		h2{
+			font-family: 'Lato', sans-serif;
+			font-weight: 700;
+			text-align: center;
+			color:#fff;
+			display:block;
+			font-size:30px;
+		}
+		p{
+			font-size:20px;
+			line-height: 30px;
+		}
 		h1#ifutama{
 			top:45%;
-			left:28%;
+			left:29%;
 		}
 		#skrollr-body {
 		    width: 100%;
@@ -37,7 +58,6 @@
 		}
 		#background{
 			height: 36%;
-    		background: #339999;
     		min-height: 550px;
 		}
 		#header{
@@ -51,14 +71,24 @@
 		#lantai{
 			height: 16%;
     		background: #2D6E6E;
-    		min-height: 150px;
+		}
+		img#pita{
+			left:40%;
+			z-index:15;
+		}
+		img#panah{
+			max-width: 50px;
+			left:46%;
+			top:160%;
+			z-index: 16;
 		}
 		img#kapal{
 			top:5%;
+			z-index:9;
 		}
 		img#matahari{
 			max-width:100px;
-			z-index:9;
+			z-index:0;
 		}
 		img#awan-1{
 			top:30%;
@@ -80,15 +110,15 @@
 			z-index:5;
 		}
 		img#tiang-2{
-			left:90%;
+			left:95%;
 			z-index:5;
 		}
 		img#bangunan{
-			left:25%;
+			left:27%;
 			z-index:6;
 		}
 		img#tiang-3{
-			left:16%;
+			left:18%;
 			z-index:5;
 		}
 		img#orang-1{
@@ -96,7 +126,7 @@
 			z-index:7;
 		}
 		img#orang-2{
-			left:43%;
+			left:45%;
 			z-index:7;
 		}
 		img#orang-3{
@@ -106,7 +136,7 @@
 
 
 
-		/*TAMPILAN KEDUA*/
+		/*TAMPILAN KEDUA
 		img#orang-4{
 			top:70%;
 		}
@@ -145,186 +175,256 @@
 			top:138%;
 			left:5%;
 		}
-		img#scroll{
+
+		img#orang-4{
+			z-index:999;
+		}
+		*/
+
+		/* SLIDE KEDUA */
+		#visi-misi{
+			height: 36%;
+    		min-height: 450px;
+    		background:#2D6E6E;
+		}
+		#visi{
+			width: 1000px;
+    		height: 100%;
+    		margin: 0 auto;
+    		position: relative;
+    		min-height: 300px;
+    		max-height: 347px;
+		}
+		#orang-4{
 			top:50%;
-			left:45%;
-			max-height: 100px;
+			z-index:17;
+		}
+		#lantai-2{
+			height: 33%;
+    		background: #339999;
+		}
+		#jendela{
+			left:0%;
+		}
+		#pot{
+			left:3%;
+		}
+		#rak{
+			top:80%;
+			max-width: 200px;
+		}
+		#kotak{
+			left:60%;
+			max-width:400px;
+			height:500px;
+			background-color: #295453;
+			position:relative;
+			vertical-align: middle;	
+			overflow:auto;
+		}
+		img#img-visi{
+			padding-top:20px;
+			padding-left: 26%;
+			position:absolute;
+		}
+		#isi-visi_{
+			text-align: center;
+			padding-left:20px;
+			padding-right:20px;
+			padding-top:220px;
+			position:absolute;
 		}
 	</style>
 </head>
 <body>
 	<div id="skrollr-body">
 
-		<div class="slide">
+		<div class="slide"
+			data-0="top:0%;"
+			data-9500="top:0%;"
+			data-10010="top:-100%;display:block;"
+			data-10011="display:none;"
+		>
 		
 
 		<!-- PERTAMA -->
-			<div id="background">
+			<div id="background"
+					data-0="background: rgb(44, 62, 80);" 
+                    data-6000="background: rgb(52, 152, 219);"
+                    data-7000="background:rgb(245, 171, 53);"
+			>
 				
 				<div id="header">
-					<img src="img/scroll.png" alt="" id="scroll"
-						data-0="opacity:1;;display:block;"
-						data-500="opacity:0;"
+					<img src="img/pita.png" alt="" id="pita"
+						data-0="top:0%;"
+						data-600="top:-150%;display:block;"
+						data-601="display:none;"
+					>
+					<img src="img/panah.png" alt="" id="panah"
+						data-0="opacity:1;"
+						data-600="opacity:0;display:block;"
+						data-601="display:none;"
 					>
 					<img src="img/kapal.png" alt="" id="kapal"
 						data-0="left:-100%;"
 						data-2000="left:30%;"
 						data-7000="left:30%;"
 						data-8000="left:30%;"
-						data-9500="left:150%;display:block;"
-						data-9501="display:none;"
 					>
 					<img src="img/matahari.png" alt="" id="matahari"
-						data-0="top:200%;"
-						data-2500="top:20%;"
-						data-7000="top:20%;"
-						data-8000="top:20%;"
-						data-9500="top:200%;display:block;"
-						data-9501="display:none;"
+						data-0="top:100%;@keyframes orbit {
+								from { 	transform: rotate(0deg) translateY(0px); }
+								to   {  transform: rotate(0deg) translateY(0px);"
+						data-7500="top:80%;@keyframes orbit {
+								from { 	transform: rotate(5deg) translateY(0px); }
+								to   {  transform: rotate(102deg) translateY(-880px); }
+								}"
+						data-8000="top:80%;"
+						data-9000="top:80%;"
 					>
 					<img src="img/awan-1.png" alt="" id="awan-1"
 						data-0="left:200%;"
 						data-2000="left:80%;"
 						data-7000="left:80%;"
 						data-8000="left:80%;"
-						data-9500="left:200%;display:block;"
-						data-9501="display:none;"
 					>
 					<img src="img/awan-2.png" alt="" id="awan-2"
 						data-0="left:-100%"
 						data-2700="left:6%;"
 						data-7000="left:6%;"
 						data-8000="left:6%;"
-						data-8500="left:-100%;display:block;"
-						data-8501="display:none;"
 					>
 					<h1 id="ifutama"
 						data-0="opacity:0;"
 						data-7000="opacity:0;"
 						data-7200="opacity:1;"
 						data-8000="opacity:1;display:block;"
-						data-10000="opacity:0;"
-						data-10001="display:hidden;"
-					>If Utama<br>
-						Menuju Keberhasilan</h1>
+					>
+					If Utama<br>
+					Menuju Keberhasilan</h1>
 					<img src="img/tiang.png" alt="" id="tiang-1"
 						data-0="top:200%;"
 						data-3000="top:90%;"
 						data-7000="top:90%;"
 						data-8000="top:90%;"
-						data-9900="top:200%;display:block;"
-						data-9901="display:none;"
 					>
 					<img src="img/tiang.png" alt="" id="tiang-2"
 						data-0="top:200%;"
 						data-3000="top:90%;"
 						data-7000="top:90%;"
 						data-8000="top:90%;"
-						data-9900="top:200%;display:block;"
-						data-9901="display:none;"
 					>
 					<img src="img/bangunan-2.png" alt="" id="bangunan"
 						data-0="top:250%;"
 						data-5000="top:85%;"
 						data-7000="top:85%;"
 						data-8000="top:85%;"
-						data-15000="top:250%;display:block;"
-						data-15001="display:none;"
 					>
 					<img src="img/tiang-2.png" alt="" id="tiang-3"
 						data-0="top:250%;";
 						data-4000="top:85%;"
 						data-7000="top:85%;"
 						data-8000="top:85%;"
-						data-13000="top:250%;display:block;"
-						data-13001="display:none;"
 					>
 					<img src="img/orang-1.png" alt="" id="orang-1"
 						data-0="left:-100%;"
-						data-7000="left:30%;"
-						data-8000="left:30%;"
-						data-16000="left:-100%;display:block;"
-						data-16001="display:none;"
+						data-7000="left:32%;"
+						data-8000="left:32%;"
 					>
 					<img src="img/orang-2.png" alt="" id="orang-2"
 						data-0="top:250%;"
 						data-7000="top:105%;"
 						data-8000="top:105%;"
-						data-16000="top:250%;display:block;"
-						data-16001="display:none;"
 					>
 					<img src="img/orang-3.png" alt="" id="orang-3"
 						data-0="left:200%;"
-						data-7000="left:55%;"
-						data-8000="left:55%;"
-						data-15000="left:200%;display:block;"
-						data-15001="display:none;"
-					>
-
-
-
-					<!-- TAMPILAN KEDUA -->
-					<img src="img/orang-4.png" alt="" id="orang-4"
-						data-0="display:none;"
-						data-9900="left:-100%;display:block;"
-						data-13500="left:10%;"
-					>
-
-					<div id="papan-tulis-container"
-						data-0="display:none;"
-						data-9900="display:block;left:200%;"
-						data-13500="left:45%;"
-					>
-						<img src="img/papan-tulis.png" alt="" id="papan-tulis">
-						<div id="tulisan">
-							<h1 id="tulisan-papan">"Friendly Major for <br> Future IT Pro"</h1>
-						</div>
-					</div>
-
-					<img src="img/jam.png" alt="" id="jam"
-						data-0="display:none;"
-						data-9900="display:block;top:200%;"
-						data-13500="top:10%;"
-					>
-					<img src="img/bel.png" alt="" id="bel"
-						data-0="display:none;"
-						data-9900="display:block;top:200%;left:-100%;"
-						data-13500="top:15%;left:65%;"
-					>
-					<img src="img/meja.png" alt="" id="meja"
-						data-0="display:none;"
-						data-9900="display:block;left:150%;"
-						data-13500="left:0%;"
-					>
-					<img src="img/globe.png" alt="" id="globe"
-						data-0="display:none;"
-						data-9900="display:block;top:200%;"
-						data-13500="top:110%;"
-					>
-					<img src="img/buku-2.png" alt="" id="buku-2"
-						data-0="display:none;"
-						data-9900="display:block;top:200%;"
-						data-13500="top:122%;"
-					>
-					<img src="img/buku-1.png" alt="" id="buku-1"
-						data-0="display:none;"
-						data-9900="display:block;top:200%;"
-						data-13500="top:138%;"
+						data-7000="left:57%;"
+						data-8000="left:57%;"
 					>
 
 				</div><!-- /header -->
 
 					<div id="bangunan-belakang"
 						data-9000="opacity:1;"
-						data-10010="opacity:0;"
 					>
 					</div><!-- /bangunan-belakang -->
+				
 
 			</div><!-- /background -->
 			
 			<div id="lantai">
 			</div><!-- /lantai -->
+
+
 		</div><!-- /slide -->
+		
+
+	<!-- SLIDE KEDUA -->
+		<div class="slide"
+			data-9500="top:100%;"
+			data-10010="top:0%;"
+			data-11000="top:0%;"
+		>
+			<div id="visi-misi">
+				<div id="visi">
+					<img src="img/orang-4.png" alt="" id="orang-4"
+						data-8000="display:none;"
+						data-9000="left:-100%;display:block;"
+						data-12000="left:15%;"
+					>
+					<img src="img/jendela.png" alt="" id="jendela"
+						data-8000="display:none;"
+						data-11000="top:-100%;display:block;"
+						data-12000="top:25%;"
+					>
+					<img src="img/pot.png" alt="" id="pot"
+						data-8000="display:none;"
+						data-11000="top:200%;display:block;"
+						data-12000="top:100%;"
+					>
+					<img src="img/rak.png" alt="" id="rak"
+						data-8000="display:none;"
+						data-11000="left:200%;display:block;"
+						data-12000="left:30%;"
+					>
+
+					<div id="kotak"
+						data-8000="display:none;"
+						data-11000="top:150%;display:block;"
+						data-12000="top:20%;"
+						data-14000="top:20%;"
+						data-15000="top:-100%;display:block;"
+						data-15001="display:none;"
+					>
+						<img src="img/visi.png" alt="" id="img-visi">
+						<div id="isi-visi_">
+							<h2 id="judul-visi">Visi</h2><br><br>
+							<p>Menghasilkan sumber daya manusia yang profesional di bidang informatika dan dapat beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi dalam lingkunga global</p>
+						</div>
+					</div><!-- .kotak -->
+
+					<div id="kotak"
+						data-14000="display:none;"
+						data-15000="top:150%;display:block;"
+						data-16000="top:20%;"
+					>
+						<img src="img/visi.png" alt="" id="img-visi">
+						<div id="isi-visi_">
+							<h2 id="judul-visi">Visi</h2><br><br>
+							<p>Menghasilkan sumber daya manusia yang profesional di bidang informatika dan dapat beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi dalam lingkunga global</p>
+						</div>
+					</div><!-- .kotak -->
+
+
+				</div><!-- /visi -->
+			</div><!-- /visi-misi -->
+
+			<div id="lantai-2">
+			</div>
+		</div>
+	<!-- /SLIDE KEDUA -->
+
+
 	</div><!-- /skrollr body -->
 
 	<!-- link js -->

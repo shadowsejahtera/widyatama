@@ -227,12 +227,78 @@
 			padding-left: 26%;
 			position:absolute;
 		}
+		img#img-misi{
+			padding-top:20px;
+			padding-left: 26%;
+			position:absolute;
+		}
+		img#img-tujuan{
+			padding-top:20px;
+			padding-left: 26%;
+			position:absolute;
+		}
 		#isi-visi_{
 			text-align: center;
 			padding-left:20px;
 			padding-right:20px;
 			padding-top:220px;
 			position:absolute;
+		}
+		#isi-misi{
+			text-align: center;
+			padding-left:20px;
+			padding-right:20px;
+			padding-top:260px;
+			position:absolute;
+		}
+		#isi-tujuan{
+			text-align: center;
+			padding-left:20px;
+			padding-right:20px;
+			padding-top:220px;
+			position:absolute;
+		}
+
+		/* SLIDE KETIGA */
+		#bidang-konsentrasi{
+			height: 36%;
+    		min-height: 660px;
+    		background:#2D6E6E;
+		}
+		#bg-visi-misi{
+			width: 1000px;
+    		height: 100%;
+    		margin: 0 auto;
+    		position: relative;
+    		min-height: 300px;
+    		max-height: 347px;
+		}
+	
+		#standar-lulusan{
+			height: 36%;
+    		min-height: 650px;
+    		background:red;
+		}
+		#bg-standar-lulusan{
+			width: 1000px;
+    		height: 100%;
+    		margin: 0 auto;
+    		position: relative;
+    		min-height: 300px;
+    		max-height: 347px;
+		}
+		#slide-5{
+			height: 36%;
+    		min-height: 650px;
+    		background:green;
+		}
+		#bg-slide-5{
+			width: 1000px;
+    		height: 100%;
+    		margin: 0 auto;
+    		position: relative;
+    		min-height: 300px;
+    		max-height: 347px;
 		}
 	</style>
 </head>
@@ -361,9 +427,13 @@
 
 	<!-- SLIDE KEDUA -->
 		<div class="slide"
-			data-9500="top:100%;"
+			data-9400="display:none;"
+			data-9500="top:100%;display:block;"
 			data-10010="top:0%;"
 			data-11000="top:0%;"
+			data-22000="top:0%;"
+			data-23000="top:-150%;display:block;"
+			data-23001="display:none;"
 		>
 			<div id="visi-misi">
 				<div id="visi">
@@ -387,13 +457,15 @@
 						data-11000="left:200%;display:block;"
 						data-12000="left:30%;"
 					>
+					
 
+					<!-- VISI -->
 					<div id="kotak"
 						data-8000="display:none;"
 						data-11000="top:150%;display:block;"
 						data-12000="top:20%;"
 						data-14000="top:20%;"
-						data-15000="top:-100%;display:block;"
+						data-15000="top:-150%;display:block;"
 						data-15001="display:none;"
 					>
 						<img src="img/visi.png" alt="" id="img-visi">
@@ -402,18 +474,44 @@
 							<p>Menghasilkan sumber daya manusia yang profesional di bidang informatika dan dapat beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi dalam lingkunga global</p>
 						</div>
 					</div><!-- .kotak -->
+					<!-- /VISI -->
 
+
+					<!-- MISI -->
 					<div id="kotak"
 						data-14000="display:none;"
-						data-15000="top:150%;display:block;"
+						data-15000="top:200%;display:block;"
 						data-16000="top:20%;"
+						data-18000="top:20%;"
+						data-19000="top:-150%;display:block;"
+						data-19001="display:none;"
 					>
-						<img src="img/visi.png" alt="" id="img-visi">
-						<div id="isi-visi_">
-							<h2 id="judul-visi">Visi</h2><br><br>
+						<img src="img/misi.png" alt="" id="img-misi">
+						<div id="isi-misi">
+							<h2 id="judul-misi">Misi</h2><br><br>
 							<p>Menghasilkan sumber daya manusia yang profesional di bidang informatika dan dapat beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi dalam lingkunga global</p>
 						</div>
 					</div><!-- .kotak -->
+					<!-- /MISI -->
+						
+
+					<!-- TUJUAN -->
+					<div id="kotak"
+						data-18000="display:none;"
+						data-19000="top:200%;display:block;"
+						data-20000="top:20%;"
+						data-22000="top:20%;"
+						data-23000="top:-150%;display:block;"
+						data-23001="display:none;"
+					>
+						<img src="img/tujuan.png" alt="" id="img-tujuan">
+						<div id="isi-tujuan">
+							<h2 id="judul-tujuan">tujuan</h2><br><br>
+							<p>Menghasilkan sumber daya manusia yang profesional di bidang informatika dan dapat beradaptasi terhadap perkembangan ilmu pengetahuan dan teknologi dalam lingkunga global</p>
+						</div>
+					</div><!-- .kotak -->
+					<!-- /TUJUAN -->
+
 
 
 				</div><!-- /visi -->
@@ -423,7 +521,56 @@
 			</div>
 		</div>
 	<!-- /SLIDE KEDUA -->
+	
 
+
+	<!-- SLIDE KETIGA -->
+		<div class="slide"
+			data-21900="display:none;"
+			data-22000="display:block;top:100%;"
+			data-22600="top:0%;"
+			data-24000="top:0%;"
+			data-25000="top:-150%;display:block;"
+			data-25601="display:none;"
+		>
+			<div id="bidang-konsentrasi">
+				<div id="bg-bidang-konsentrasi">
+					
+				</div>
+			</div>
+		</div>
+	<!-- SLIDE KETIGA -->
+
+	<!-- SLIDE KEEMPAT -->
+		<div class="slide"
+			data-23900="display:none;"
+			data-24000="display:block;top:100%;"
+			data-24600="top:0%;"
+			data-26000="top:0%;"
+			data-27600="top:-150%;display:block;"
+			data-27601="display:none;"
+		>
+			<div id="standar-lulusan">
+				<div id="bg-standar-lulusan">
+					
+				</div>
+			</div>
+		</div>
+	<!-- SLIDE KEEMPAT -->
+
+		<!-- SLIDE LIMA -->
+		<div class="slide"
+			data-25900="display:none;"
+			data-26000="display:block;top:100%;"
+			data-26900="top:0%;"
+		>
+			<div id="slide-5">
+				<div id="bg-slide-5">
+					
+				</div>
+			</div>
+		</div>
+	<!-- SLIDE LIMA -->
 
 	</div><!-- /skrollr body -->
 
